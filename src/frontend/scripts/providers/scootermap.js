@@ -29,10 +29,10 @@ class ScooterMap {
                 return res.json().then((data) => {
                     return data.vehicles.map((vehicle) => {
                         return {
-                            id: vehicle.vehicle_id,
-                            lat: vehicle.latitude,
-                            lon: vehicle.longitude,
-                            battery: vehicle.battery_level || 'Not reported'
+                            code: vehicle.vehicle_id,
+                            latitude: vehicle.latitude,
+                            longitude: vehicle.longitude,
+                            battery_level: vehicle.battery_level // This is reported as %.
                         }
                     });
                 }).catch((err) => {
