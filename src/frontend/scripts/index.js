@@ -2,7 +2,7 @@ import "leaflet";
 import 'leaflet.markercluster';
 import 'leaflet.markercluster.layersupport';
 import updater from "./utils/updater";
-import {Lime, Onzo, Beam, Bird, Flamingo} from "./providers";
+import {Lime, Onzo, Beam, Bird, Flamingo, Blip, Neuron, JUMP} from "./providers";
 import '../styles/clusterMarker.css';
 
 let userLat = null;
@@ -15,6 +15,9 @@ const groups = {
     "Beam": Beam.group,
     "Bird (and Partners)": Bird.group,
     "Flamingo": Flamingo.group
+    "JUMP by Lime": JUMP.group
+    "Neuron": Neuron.group
+    "Blip": Blip.group
 };
 
 const map = L.map('mapid').setView([-40.9006, 174.8860], 5);
@@ -69,6 +72,9 @@ function updateAll() {
     updater(Beam, northEast, southWest);
     updater(Bird, northEast, southWest);
     updater(Flamingo);
+    updater(JUMP, northEast, southWest);
+    updater(Neuron, northEast, southWest);
+    updater(Blip, northEast, southWest);
 
     markerClusterLayerSupport.refreshClusters();
 }
