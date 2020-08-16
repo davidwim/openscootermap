@@ -29,3 +29,18 @@ export const flamingoIcon = new L.Icon({
     iconSize: [25, 39],
     iconAnchor: [12, -1]
 });
+
+export const jumpIcon = new L.Icon({
+    iconUrl: require("../../assets/jump.png"),
+    ...iconBase
+});
+
+export const neuronIcon = new L.Icon({
+    iconUrl: require("../../assets/neuron.png"),
+    ...iconBase
+});
+
+export const blipIcon = new L.Icon({
+    iconUrl: require("../../assets/blip.png"),
+    ...iconBase
+});
