@@ -20,7 +20,7 @@ export default function (vehicleObject, northEast, southWest) {
                         icon: vehicleObject.icon,
                         vehicleId: item.id
                     }).addTo(vehicleObject.group);
-                    mark.bindPopup(`<span>Brand: ${vehicleObject.brand}</span><br><span>Battery level: ${item.battery}</span>`);
+                    mark.bindPopup(`<span><b>Brand</b>: ${vehicleObject.brand}</span><br><span><b>Battery level:</b> ${item.battery}</span><br><span><b>Code</b>: ${item.id}</b></span>`);
                 } else {
                     updateScooter(vehicleObject.group, item);
                 }
